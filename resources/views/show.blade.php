@@ -7,11 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<body>
-        @foreach($tasks as $task)
-            <a href="tasks/{{$task->id}}">
-                {{$task->body}}
-            </a> <br>
-        @endforeach
+    <body>
+        <h1>{{$task->body}}</h1>
 </body>
 </html>
