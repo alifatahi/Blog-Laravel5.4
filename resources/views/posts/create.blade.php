@@ -8,11 +8,13 @@
 
         <form method="post" action="/posts">
 
+              @include('layouts.errors')
+
             {{csrf_field()}}
 
             <div class="form-group">
                 <label for="title">Title:</label>
-                <input type="text" class="form-control" id="title" name="title">
+                <input type="text" class="form-control" id="title" name="title" >
             </div>
 
             <div class="form-group">
@@ -21,6 +23,9 @@
             </div>
 
             <button type="submit" class="btn btn-primary">Publish</button>
+
+
+
         </form>
     </div>
 @endsection
