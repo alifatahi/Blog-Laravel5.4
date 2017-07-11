@@ -22,4 +22,5 @@ class Post extends Model
     {
         $this->comments()->create(compact('body'));
     }
+
 }
