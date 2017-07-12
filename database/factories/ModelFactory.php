@@ -11,6 +11,8 @@
 |
 */
 
+use App\User;
+
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 $factory->define(App\User::class, function (Faker\Generator $faker) {
     static $password;
@@ -22,3 +24,17 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+//Create new for Post
+$factory->define(App\Post::class, function (Faker\Generator $faker) {
+  return[
+       'user_id' => function(){
+            return factory(User::class)->create()->id;
+       } ,
+      'title' => $faker->sentence,
+    'body'  => $faker->paragraph
+
+  ];
+});
+
+
