@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-    <div class="col-sm-8 blog-main">
+    <div class="col-sm-8 App-main">
              <h1>{{$post->title}}</h1>
             <article>
                 {{$post->body}}

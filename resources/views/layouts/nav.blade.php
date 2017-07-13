@@ -1,6 +1,6 @@
-<div class="blog-masthead">
+<div class="App-masthead">
     <div class="container">
-        <nav class="nav blog-nav">
+        <nav class="nav App-nav">
             <a class="nav-link active" href="{{route('home')}}">Home</a>
             <a class="nav-link active" href="{{route('create_post')}}">creat</a>
             <a class="nav-link" href="#">New features</a>

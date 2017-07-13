@@ -6,16 +6,16 @@
     @include('layouts.header')
 
 
-            <div class="col-sm-8 blog-main">
+            <div class="col-sm-8 App-main">
                 @foreach($posts as $post)
                     @include('posts.post')
                 @endforeach
-                <nav class="blog-pagination">
+                <nav class="App-pagination">
                     <a class="btn btn-outline-primary" href="#">Older</a>
                     <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
                 </nav>
 
-            </div><!-- /.blog-main -->
+            </div><!-- /.App-main -->
 
 
 

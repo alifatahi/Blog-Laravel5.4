@@ -8,6 +8,6 @@
     <title>Document</title>
 </head>
 <body>
-        <h1>Welocme to Blog {{$user->name}}</h1>
+        <h1>Welocme to App {{$user->name}}</h1>
 </body>
 </html>
