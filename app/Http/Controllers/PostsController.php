@@ -54,6 +54,8 @@ class PostsController extends Controller
 //            'user_id' => auth()->id()
 //        ]);
 
+        session()->flash('message','Your Post Created');
+
         return redirect('/');
     }
 }
