@@ -48,4 +48,11 @@ class Post extends Model
             ->toArray();
     }
 
+
+    public function tags()
+    {
+        //Its Many to Many relation because 1 post can have many tags
+        return $this->belongsToMany(Tag::class);
+    }
+
 }
