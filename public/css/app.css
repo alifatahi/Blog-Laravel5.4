@@ -1,6 +1,5 @@
 /*
- * Globals
- */
+ * Globals */
 
 @media (min-width: 48em) {
   html {
@@ -31,16 +30,14 @@ h6,
 }
 
 /*
- * Override Bootstrap's default container.
- */
+ * Override Bootstrap's default container. */
 
 .container {
   max-width: 60rem;
 }
 
 /*
- * Masthead for nav
- */
+ * Masthead for nav */
 
 .App-masthead {
   margin-bottom: 3rem;
@@ -64,8 +61,6 @@ h6,
   background-color: transparent;
 }
 
-/* Active state gets a caret at the bottom */
-
 .nav-link.active {
   color: #fff;
 }
@@ -84,9 +79,10 @@ h6,
   border-left: .3rem solid transparent;
 }
 
+/* Active state gets a caret at the bottom */
+
 /*
- * App name and description
- */
+ * App name and description */
 
 .App-header {
   padding-bottom: 1.25rem;
@@ -112,15 +108,15 @@ h6,
 }
 
 /*
- * Main column and sidebar layout
- */
+ * Main column and sidebar layout */
 
 /* Sidebar modules for boxing content */
 
 .sidebar-module {
   padding: 1rem;
-  /*margin: 0 -1rem 1rem;*/
 }
+
+/*margin: 0 -1rem 1rem; */
 
 .sidebar-module-inset {
   padding: 1rem;
@@ -145,8 +141,7 @@ h6,
 }
 
 /*
- * App posts
- */
+ * App posts */
 
 .App-post {
   margin-bottom: 4rem;
@@ -163,8 +158,7 @@ h6,
 }
 
 /*
- * Footer
- */
+ * Footer */
 
 .App-footer {
   padding: 2.5rem 0;
