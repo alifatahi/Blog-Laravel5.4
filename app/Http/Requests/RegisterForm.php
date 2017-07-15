@@ -41,9 +41,12 @@ class RegisterForm extends FormRequest
     //If Authorize & Rules passes we Come to this method for Create new user
     public function persist()
     {
-        $user = User::create(
-            $this->only(['name','email','password'])
-        );
+        $user = User::create([
+           'name'      => request('name'),
+           'email'     => request('email'),
+            'password' => bcrypt(request('password'))
+//            $this->only(['name','email','password'])
+        ]);
         auth()->login($user);
 
         Mail::to($user)->send(new Welcome($user));
