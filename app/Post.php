@@ -6,25 +6,36 @@ namespace App;
 
 use Carbon\Carbon;
 
+
+/**
+ * Class Post
+ * @package App
+ */
 class Post extends Model
 {
 
+    //Declare Relation for Comment Model
     public function comments()
     {
+        //each Post has many comments
         return $this->hasMany(Comment::class);
     }
 
+    //Declare Relation to User Model
     public function user()
     {
+        //each Post Belongs to 1 User
         return $this->belongsTo(User::class);
     }
 
-
+    //Use Our Eloquent relation for add Comments
     public function addComments($body)
     {
+        //so create comments by using relation so we dont need to pass POST Id
         $this->comments()->create(compact('body'));
     }
 
+    //Scope Method for Filter Post
     public function scopeFilter($query, $filters)
     {
 
@@ -38,6 +49,7 @@ class Post extends Model
 
     }
 
+    //Show Archives From our Posts in Month & Year
     public static function archives()
     {
         return static::selectRaw(

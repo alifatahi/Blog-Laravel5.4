@@ -7,6 +7,10 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\Welcome;
 use Illuminate\Foundation\Http\FormRequest;
 
+/**
+ * Class RegisterForm
+ * @package App\Http\Requests
+ */
 class RegisterForm extends FormRequest
 {
     /**
@@ -34,6 +38,7 @@ class RegisterForm extends FormRequest
     }
 
 
+    //If Authorize & Rules passes we Come to this method for Create new user
     public function persist()
     {
         $user = User::create(

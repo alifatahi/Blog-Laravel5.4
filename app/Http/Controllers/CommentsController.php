@@ -3,12 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\Post;
-use App\Comment;
 
+/**
+ * Class CommentsController
+ * @package App\Http\Controllers
+ */
 class CommentsController extends Controller
 {
+    /**
+     * @param Post $post
+     * @return \Illuminate\Http\RedirectResponse
+     * Method to Store Comment
+     */
     public function store(Post $post)
     {
+        //Do Validation
         $this->validate(request(),[
             'body' => 'required|min:3'
         ]);

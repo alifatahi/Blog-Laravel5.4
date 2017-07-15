@@ -4,10 +4,16 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Class Tag
+ * @package App
+ */
 class Tag extends Model
 {
+    //Declare Relation to Post Model
     public function posts()
     {
+        //each Tag Belongs to many Post
         return $this->belongsToMany(Post::class);
         }
 

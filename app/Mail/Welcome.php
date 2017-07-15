@@ -6,11 +6,15 @@ use App\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Contracts\Queue\ShouldQueue;
 
+/**
+ * Class Welcome
+ * @package App\Mail
+ */
 class Welcome extends Mailable
 {
     use Queueable, SerializesModels;
+    //add user property
     public $user;
     /**
      * Create a new message instance.
@@ -29,6 +33,7 @@ class Welcome extends Mailable
      */
     public function build()
     {
+        //Load View for send email
         return $this->view('emails.welcome');
     }
 }

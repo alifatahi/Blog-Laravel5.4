@@ -25,7 +25,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     ];
 });
 
-//Create new for Post
+//Create new for Factory Post which is Fake Data
 $factory->define(App\Post::class, function (Faker\Generator $faker) {
   return[
        'user_id' => function(){

@@ -3,10 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Tag;
-use Illuminate\Http\Request;
 
+/**
+ * Class TagsController
+ * @package App\Http\Controllers
+ */
 class TagsController extends Controller
 {
+    //Pass Tags to Index View using Route Binding
     public function index(Tag $tags)
     {
         $posts = $tags->posts;

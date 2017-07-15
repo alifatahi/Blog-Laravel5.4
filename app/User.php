@@ -5,6 +5,10 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
+/**
+ * Class User
+ * @package App
+ */
 class User extends Authenticatable
 {
     use Notifiable;
@@ -28,12 +32,14 @@ class User extends Authenticatable
     ];
 
 
+    //Declare Eloquent Method for Relation to Post
     public function posts()
     {
+        //each User has many post
         return $this->hasMany(Post::class);
     }
 
-
+    //Method to save post but also use relation method posts
     public function publish(Post $post)
     {
         $this->posts()->save($post);
